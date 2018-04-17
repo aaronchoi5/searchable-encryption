@@ -130,7 +130,7 @@ def main():
 	elif sys.argv[1] == "encryption":
 		encryption(sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
 	elif sys.argv[1] == "token":
-		token(sys.argv[2], sys.argv[3])
+		token(sys.argv[2], sys.argv[3], sys.argv[4])
 	elif sys.argv[1] == "search":
 		search(sys.argv[2], sys.argv[3])
 main()
