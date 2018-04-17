@@ -95,22 +95,24 @@ def encryption(skprfPath, skaesPath, indexPath, filesPath, ciphertextfiles):
 
 				print(dictionary[cipherByteStringForm])
 
-
-
 			text = ""
 
 	with open(indexPath, "w") as f:
 		for key, values in dictionary.items():
 			f.write(key + " " + values + "\n")
 
-def token(blah, blah2):
+def token(skprfPath, keyword, tokenPath):
 	with open(skprfPath) as ef:
 		ecbkeytext = ef.read()
-
+	paddedkeyword = keyword
 	ecbkeyByteForm = bytes([int(b, 16) for b in ecbkeytext.split("0x")[1:]])
-	cipherByteStringForm = ecbEncrypt(keyword, ecbkeyByteForm)
+	
+	while((len(paddedtext) % 16) != 0):
+		paddedkeyword += " "
+	cipherByteStringForm = ecbEncrypt(paddedkeyword, ecbkeyByteForm)
 	with open(tokenPath, "w") as tt:
 		tt.write(cipherByteStringForm)
+	print(cipherByteStringForm)
 
 def search(blah, blah2):
 	a = 1
