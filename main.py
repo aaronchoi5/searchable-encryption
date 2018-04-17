@@ -107,7 +107,7 @@ def token(skprfPath, keyword, tokenPath):
 	paddedkeyword = keyword
 	ecbkeyByteForm = bytes([int(b, 16) for b in ecbkeytext.split("0x")[1:]])
 	
-	while((len(paddedtext) % 16) != 0):
+	while((len(paddedkeyword) % 16) != 0):
 		paddedkeyword += " "
 	cipherByteStringForm = ecbEncrypt(paddedkeyword, ecbkeyByteForm)
 	with open(tokenPath, "w") as tt:
