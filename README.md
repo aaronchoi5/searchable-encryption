@@ -1,5 +1,8 @@
 # searchable-encryption
 
+This is my implementation of searchable encryption. This probram can generate it's own keys for encryption and decryption. You can specify where the files to be encrypted and decrypted are. After running the keygen and generating encrypted files and generating a token by feeding your keyword you want to search for, we can store the results of our queries into a generated results.txt file.
+
+
 Language: Python3 
 Platform: Linux(Ubuntu 16.04), Windows 10 and Mac os 10.13.4 
 Reference: Cryptography library in Python
